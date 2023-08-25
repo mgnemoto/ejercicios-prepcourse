@@ -25,6 +25,26 @@ function filtrar(funcion) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
 
+  // array.filter(
+  //   function(papa){papa>100}
+  //   )
+
+  // const callback = (p) =>{
+    
+  // }
+
+  Array.prototype.filtrar=function(callback){
+
+    let arrayTrue=[];
+
+      for(let i=0;i<this.length;i++){
+        if(callback(this[i])){
+          arrayTrue.push(this[i])
+        }
+      }
+      return arrayTrue;
+  }
+
 };
 
 // No modifiques nada debajo de esta linea //
